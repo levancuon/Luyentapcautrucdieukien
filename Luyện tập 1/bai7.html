@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<h1> tính cước điện thoại cho một hộ gia đinh với các thông số đã cho</h1>
+<ul>
+    <li>Phí thuê bao bắt buộc là 25 nghìn</li>
+    <li>600 đồng cho mỗi phút gọi của 50p đầu tiên</li>
+    <li>400 đồng cho mỗi phút gọi của 150p tiếp theo</li>
+    <li>200 đồng cho bất kỳ phút gọi nào sau 200p đầu tiên</li>
+</ul>
+<body>
+<input type="text" id="1"> : thời gian đã gọi
+<br>
+<button type="button" onclick="tien();">tính</button>
+<br>
+<p id="2">  </p>
+<script>
+
+    // function tien(){
+    //     let a = 25000;
+    //     let b = document.getElementById("1").value;
+    //     let tiencuoc;
+    //     if(b<=50){
+    //         tiencuoc50p = a + 600*b;
+    //         document.getElementById('2').innerHTML= +tiencuoc50p+"vnd";
+    //     }
+    //     if (b>50 && b<= 200){
+    //         tiencuoc150p = a + 600*50 + 400*(b-50);
+    //         document.getElementById('2').innerHTML= tiencuoc150p+"vnd";
+    //     }
+    //     if (b>200){
+    //         tiencuoc200p = a + 600*50 + 400*150 + 200*(b-200);
+    //         document.getElementById('2').innerHTML= tiencuoc200p+"vnd";
+    //     }
+    //
+    // }
+    //
+    function tien(){
+        let a = 25000;
+        let b = document.getElementById("1").value;
+        let tiencuoc;
+        if(b<=50){
+            tiencuoc50p = a + 600*b;
+            document.getElementById('2').innerHTML= +tiencuoc50p+"vnd";
+        }
+        else if (b<= 200){
+            tiencuoc150p = a + 600*50 + 400*(b-50);
+            document.getElementById('2').innerHTML= tiencuoc150p+"vnd";
+        }
+        else {
+            tiencuoc200p = a + 600*50 + 400*150 + 200*(b-200);
+            document.getElementById('2').innerHTML= tiencuoc200p+"vnd";
+        }
+
+    }
+</script>
+</body>
+</html>
